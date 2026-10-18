@@ -216,6 +216,7 @@ function useCountdown(targetDate) {
 // ── Navbar ──────────────────────────────────────────────
 function Navbar({ playing, onToggleMusic }) {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -233,10 +234,10 @@ function Navbar({ playing, onToggleMusic }) {
       >
         <img src="/images/logo.png" alt="AM Wedding Crest" />
       </a>
-      <ul className="navbar-links">
+      <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
         {['Story', 'Events', 'Gallery', 'Venue'].map(item => (
           <li key={item}>
-            <a href={`#${item.toLowerCase()}`}>{item}</a>
+            <a href={`#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)}>{item}</a>
           </li>
         ))}
       </ul>
@@ -248,6 +249,14 @@ function Navbar({ playing, onToggleMusic }) {
       >
         <span className="music-icon">{playing ? '⏸️' : '▶️'}</span>
         {playing ? 'Pause Music' : 'Play Music'}
+      </button>
+      <button
+        className={`nav-burger ${menuOpen ? 'open' : ''}`}
+        onClick={() => setMenuOpen(o => !o)}
+        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={menuOpen}
+      >
+        <span /><span /><span />
       </button>
     </nav>
   );
