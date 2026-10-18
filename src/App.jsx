@@ -487,8 +487,6 @@ const eventsData = [
     icon: '🐴',
     image: '/images/baraat_watercolor.png',
     imagePos: 'center 90%',
-    desc: 'The grand procession of the groom arrives in royal style on the golden shores of Paradip. Music fills the air, sparklers light the night, and the festive dance of the baraat begins against the backdrop of the Bay of Bengal.',
-    odiaDesc: 'ବରଯାତ୍ରା ସମୁଦ୍ର ତଟରେ ଆସିବ। ଆଲୋକ ଓ ସଙ୍ଗୀତ ସହ ଏକ ଅବିସ୍ମରଣୀୟ ଉତ୍ସବ।',
   },
   {
     id: 'varmala',
@@ -499,8 +497,6 @@ const eventsData = [
     icon: '💐',
     image: '/images/varmala_new.jpeg',
     imagePos: 'center 100%',
-    desc: 'As fireworks burst above the Konark Temple silhouette, Amresh and Madhusmita exchange garlands of marigold and jasmine — a timeless moment that marks the beginning of their eternal union.',
-    odiaDesc: 'ଅଗ୍ନି ଆଲୋକ ଓ ଫୁଲ ଗୁଛ ସହ ବର ଓ କନ୍ୟା ଏକ ଅଭୂତପୂର୍ବ ମୁହୂର୍ତ୍ତ ଅନୁଭବ କରିବେ।',
   },
   {
     id: 'dinner',
@@ -510,8 +506,6 @@ const eventsData = [
     odiaTime: 'ରାତ୍ରି ୧୦ ଟା',
     icon: '🍽️',
     image: '/images/dinner_watercolor.png',
-    desc: 'Under a canopy of stars and fairy lights on the shores of Paradip, join us for a royal feast. Savor the finest Odia cuisine and coastal delicacies as the waves serenade this magical evening.',
-    odiaDesc: 'ସ୍ୱର୍ଗୀୟ ଭୋଜ। ସ୍ଥାନୀୟ ଓ ରାଜକୀୟ ଖାଦ୍ୟ ସହ ଏକ ଅଦ୍ଭୁତ ଅନୁଭୂତି।',
   },
 ];
 
@@ -627,17 +621,6 @@ function EventsSection() {
                 </div>
                 <h3 className="event-name">{event.name}</h3>
                 <p className="event-name-odia">{event.odiaName}</p>
-                <p className="event-desc">{event.desc}</p>
-                <p style={{
-                  fontFamily: 'Noto Sans Oriya, sans-serif',
-                  fontSize: '0.8rem',
-                  color: 'var(--sand)',
-                  opacity: 0.65,
-                  marginTop: '8px',
-                  lineHeight: 1.7,
-                }}>
-                  {event.odiaDesc}
-                </p>
               </div>
             </div>
           </FadeIn>
